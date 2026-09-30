@@ -3,11 +3,7 @@ const { spawn } = require("child_process");
 const path = require("path");
 const cors = require("cors");
 
-const javaProjectPath = path.join(
-    __dirname,
-    "..",
-    ".."
-);
+const javaProjectPath =  __dirname;
 
 const app = express();
 
