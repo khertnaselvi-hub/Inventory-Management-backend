@@ -36,7 +36,7 @@ public class InventoryDashboardBridge {
             con.close();
 
         } catch (Exception e) {
-            System.out.println("0|0|0");
+            e.printStackTrace();
         }
     }
 }
