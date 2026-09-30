@@ -52,7 +52,7 @@ app.get("/products", (req, res) => {
         "java",
         [
             "-cp",
-            `${javaProjectPath};${path.join(javaProjectPath, "sqlite-jdbc-3.53.4.0.jar")}`,
+            `${javaProjectPath}:${path.join(javaProjectPath, "sqlite-jdbc-3.53.4.0.jar")}`,
             "InventoryViewBridge"
         ],
         {
@@ -106,7 +106,7 @@ app.put("/update-product", (req, res) => {
         "java",
         [
             "-cp",
-            `${javaProjectPath};${path.join(javaProjectPath, "sqlite-jdbc-3.53.4.0.jar")}`,
+            `${javaProjectPath}:${path.join(javaProjectPath, "sqlite-jdbc-3.53.4.0.jar")}`,
             "InventoryUpdateBridge",
             id.toString(),
             product,
@@ -145,7 +145,7 @@ app.delete("/delete-product", (req, res) => {
         "java",
         [
             "-cp",
-            `${javaProjectPath};${path.join(javaProjectPath, "sqlite-jdbc-3.53.4.0.jar")}`,
+            `${javaProjectPath}:${path.join(javaProjectPath, "sqlite-jdbc-3.53.4.0.jar")}`,
             "InventoryDeleteBridge",
             id.toString()
         ],
@@ -178,7 +178,7 @@ app.put("/update-stock", (req, res) => {
         "java",
         [
             "-cp",
-            `${javaProjectPath};${path.join(javaProjectPath, "sqlite-jdbc-3.53.4.0.jar")}`,
+            `${javaProjectPath}:${path.join(javaProjectPath, "sqlite-jdbc-3.53.4.0.jar")}`,
             "InventoryStockBridge",
             id.toString(),
             quantity.toString()
@@ -210,7 +210,7 @@ app.get("/low-stock", (req, res) => {
         "java",
         [
             "-cp",
-            `${javaProjectPath};${path.join(javaProjectPath, "sqlite-jdbc-3.53.4.0.jar")}`,
+            `${javaProjectPath}:${path.join(javaProjectPath, "sqlite-jdbc-3.53.4.0.jar")}`,
             "InventoryLowStockBridge"
         ],
         {
@@ -260,7 +260,7 @@ app.get("/dashboard", (req, res) => {
         "java",
         [
             "-cp",
-            `${javaProjectPath};${path.join(javaProjectPath, "sqlite-jdbc-3.53.4.0.jar")}`,
+            `${javaProjectPath}:${path.join(javaProjectPath, "sqlite-jdbc-3.53.4.0.jar")}`,
             "InventoryDashboardBridge"
         ],
         {
