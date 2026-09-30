@@ -14,6 +14,13 @@ COPY . .
 RUN javac -cp "sqlite-jdbc-3.53.4.0.jar" InventoryBridge.java
 RUN javac -cp "sqlite-jdbc-3.53.4.0.jar" InventoryViewBridge.java
 RUN javac -cp "sqlite-jdbc-3.53.4.0.jar" InventoryDashboardBridge.java
+RUN javac -cp "sqlite-jdbc-3.53.4.0.jar" InventoryUpdateBridge.java
+RUN javac -cp "sqlite-jdbc-3.53.4.0.jar" InventoryDeleteBridge.java
+RUN javac -cp "sqlite-jdbc-3.53.4.0.jar" InventoryStockBridge.java
+RUN javac -cp "sqlite-jdbc-3.53.4.0.jar" InventoryLowStockBridge.java
+RUN javac -cp "sqlite-jdbc-3.53.4.0.jar" InventoryInitBridge.java
+
+RUN java -cp ".:sqlite-jdbc-3.53.4.0.jar" InventoryInitBridge
 
 EXPOSE 5000
 
