@@ -20,7 +20,7 @@ app.post("/add-product", (req, res) => {
         "java",
         [
             "-cp",
-            `${javaProjectPath};${path.join(javaProjectPath, "sqlite-jdbc-3.53.4.0.jar")}`,
+            `${javaProjectPath}:${path.join(javaProjectPath, "sqlite-jdbc-3.53.4.0.jar")}`,
             "InventoryBridge",
             product,
             category,
